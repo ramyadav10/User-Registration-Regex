@@ -44,4 +44,18 @@ public void CheckPassword(){
 	boolean result=validator.vPassword(pwd);
 	Assert.assertTrue(result);
 }
+
+
+@Test
+public void givenMessage_whenhappy_ShouldReturnHappy() {
+	Status moodAnalyser = new Status();
+    String mood = moodAnalyser.analyseMood("this is a Happy Message");
+    Assert.assertEquals("HAPPY", mood);
+}
+@Test
+public void givenMessage_whenSad_ShouldReturnSad() {
+	Status moodAnalyser = new Status();
+    String mood = moodAnalyser.analyseMood("this is a Sad Message");
+    Assert.assertEquals("SAD", mood);
+}
 }
